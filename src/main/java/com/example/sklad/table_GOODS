@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS `GOODS` (id INT PRIMARY KEY auto_increment, name VARCHAR(255), price DECIMAL(8,2));
+INSERT INTO GOODS values (NULL, 'Сахар', 52.00);
+INSERT INTO GOODS values (NULL, 'Мука', 102.00);
+INSERT INTO GOODS values (NULL, 'Вода минеральная Кубай', 33.90);
+INSERT INTO GOODS values (NULL, 'Круасаны', 15.00);
+INSERT INTO GOODS values (NULL, 'Макароны Barilla', 62.00);
+INSERT INTO GOODS values (NULL, 'Пакет Майка', 9.00);

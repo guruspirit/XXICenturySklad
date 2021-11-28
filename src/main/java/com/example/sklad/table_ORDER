@@ -1,0 +1,15 @@
+//the last version of table
+CREATE TABLE IF NOT EXISTS `ORDER` (id INT PRIMARY KEY, client VARCHAR(255), date DATE, address VARCHAR(255));
+//table v1.1
+CREATE TABLE IF NOT EXISTS `ORDER` (id INT NOT NULL PRIMARY KEY auto_increment, client VARCHAR(255), date DATE, address VARCHAR(255));
+
+INSERT INTO "ORDER" values (1, 'Иванов И.И.', '2001-01-09', 'Ростов-на-Дону, ул. Садовая, 1' );
+INSERT INTO "ORDER" values (NULL, 'Лукьянов И.И.', '2002-02-06', 'Ростов-на-Дону, ул. Садовая, 2' );
+INSERT INTO "ORDER" values (NULL, 'Петров С.И.', '2003-04-04', 'Ростов-на-Дону, ул. Малиновского, 21' );
+INSERT INTO "ORDER" values (NULL, 'Сидоров П.И.', '2004-05-08', 'Ростов-на-Дону, ул. М.Горького, 71' );
+INSERT INTO "ORDER" values (NULL, 'Головко Ц.И.', '2005-04-18', 'Ростов-на-Дону, ул. Магнитогорская, 12' );
+INSERT INTO "ORDER" values (NULL, 'Кривко У.И.', '2006-03-11', 'Батайск, ул. Тельмана, 18' );
+INSERT INTO "ORDER" values (NULL, 'Стоянов Ю.И.', '2007-03-12', 'Азов, ул. Седова, 16' );
+INSERT INTO "ORDER" values (NULL, 'Лещенко У.И.', '2008-08-03', 'Новочеркасск, ул. Садовая, 13' );
+INSERT INTO "ORDER" values (NULL, 'Нормальный У.И.', '2009-07-04', 'Москва, ул. Никольская, 8' );
+INSERT INTO "ORDER" values (NULL, 'Ходорук А.И.', '2010-06-05', 'Ростов-на-Дону, ул. Седова, 132' );
