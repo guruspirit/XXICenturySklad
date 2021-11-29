@@ -2,12 +2,25 @@ package com.example.sklad.jpa;
 
 import com.example.sklad.entity.Goods;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
 public interface GoodsRepository extends JpaRepository<Goods, Integer> {
-    @Query("select g from Goods g order by g.name")
+
+    @Modifying
+    @Query("update Goods g set g.name=?2, g.price=?3 where g.id=?1")
+    void setGoodsById(int id, String name, String price);
+
+    void deleteById(int id);
+
     List<Goods> findAllByName();
+
+    //find by id - найти по id - where id = ?1
+    //@Query("select g from Goods g where g.id = ?1")
+    List<Goods>  findAllById(int id);
+
 
 }

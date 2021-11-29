@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Goods} from "../Model/goods";
 
 @Injectable({
   providedIn: 'root'
@@ -7,5 +8,8 @@ import {HttpClient} from "@angular/common/http";
 export class ServiceService {
 
   constructor(private http:HttpClient) { }
-  Url= 'http://localhost:'
+  Url= 'http://localhost:8080/goods'
+  getGoods(){
+    return this.http.get<Goods[]>(this.Url)
+  }
 }
