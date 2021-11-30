@@ -4,9 +4,9 @@ import {GoodsComponent} from "./components/goods/goods.component";
 import {OrderComponent} from "./components/order/order.component";
 
 const routes: Routes = [
-  {path:'',component:OrderComponent},
+  {path:'order',component:OrderComponent},
   {path:'goods', component:GoodsComponent},
-  {path:'**', redirectTo:'/'}
+  {path:'**', redirectTo:'/order'}
 ];
 
 @NgModule({

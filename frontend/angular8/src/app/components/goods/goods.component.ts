@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
+import {ServiceService} from '../../service/service.service'
+import {Goods} from "../../Model/goods";
 
 @Component({
   selector: 'app-goods',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoodsComponent implements OnInit {
 
-  constructor() { }
+  goods:Goods[]=[];
+  constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void {
+    this.service.getGoods()
+      .subscribe(data=>{
+        this.goods = data;
+      })
+
   }
 
 }

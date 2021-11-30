@@ -20,7 +20,8 @@ public interface GoodsRepository extends JpaRepository<Goods, Integer> {
 
     void deleteById(int id); //delete
 
-    List<Goods> findAllByName(); //selectAll
+    @Query(value = "select * from Goods WHERE ID>0;", nativeQuery = true)
+    List<Goods> findAll(); //selectAll
 
     //find by id - найти по id - where id = ?1
     //@Query("select g from Goods g where g.id = ?1")

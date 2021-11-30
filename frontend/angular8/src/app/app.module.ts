@@ -13,8 +13,9 @@ import { EditGoodsComponent } from './components/edit-goods/edit-goods.component
 import { RemoveGoodsComponent } from './components/remove-goods/remove-goods.component';
 import { GetGoodsComponent } from './components/get-goods/get-goods.component';
 import { GetGoodsByIdComponent } from './components/get-goods-by-id/get-goods-by-id.component';
-
-
+import {FormsModule} from '@angular/forms'
+import {ServiceService} from '../app/service/service.service'
+import {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,9 +32,11 @@ import { GetGoodsByIdComponent } from './components/get-goods-by-id/get-goods-by
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

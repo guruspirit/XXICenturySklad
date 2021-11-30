@@ -14,7 +14,7 @@ public class GoodsServiceImpl implements GoodsService{
 
     @Override
     public List<Goods> selectAll() {
-        return goodsRepository.findAllByName();
+        return goodsRepository.findAll();
     }
 
     @Override

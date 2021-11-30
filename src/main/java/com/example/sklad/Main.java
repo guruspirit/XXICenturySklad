@@ -2,6 +2,7 @@ package com.example.sklad;
 
 import com.example.sklad.jpa.GoodsRepository;
 import com.example.sklad.jpa.PersonRepository;
+import com.example.sklad.service.GoodsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -32,7 +33,7 @@ public class Main implements CommandLineRunner{
 //        System.out.println("result: " + personRepository.findByClient("Иванов И.И."));
 //        Goods goods = new Goods("Картофель", 50.0);
 //        goodsRepository.save(goods);
-        System.out.println("Result " + goodsRepository.findAllByName());
+        System.out.println("RESULT " + goodsRepository.findAllById(2));
 
     }
 }

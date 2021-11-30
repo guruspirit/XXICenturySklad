@@ -14,10 +14,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="text-field">
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
+        <tr *ngFor="let product of goods" class="text-field">
+          <td>{{product.id}}</td>
+          <td>{{product.name}}</td>
+          <td></td>
           <td>
             <button class="btn btn-warning btn-sm">edit</button>
           </td>
