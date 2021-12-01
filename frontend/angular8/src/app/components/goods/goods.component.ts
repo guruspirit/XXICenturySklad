@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {ServiceService} from '../../service/service.service'
-import {Goods} from "../../Model/goods";
+import {Product} from "../../Model/product";
 
 @Component({
   selector: 'app-goods',
@@ -10,7 +10,7 @@ import {Goods} from "../../Model/goods";
 })
 export class GoodsComponent implements OnInit {
 
-  goods:Goods[]=[];
+  goods:Product[]=[];
   constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void {
@@ -19,6 +19,11 @@ export class GoodsComponent implements OnInit {
         this.goods = data;
       })
 
+  }
+  edit(product:Product){
+    localStorage.setItem("id",product.id.toString());
+    this.router.navigate(["edit"]);
+    //this.service.updateGoods(Product)
   }
 
 }

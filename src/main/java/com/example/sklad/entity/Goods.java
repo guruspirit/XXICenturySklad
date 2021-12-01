@@ -46,7 +46,7 @@ public class Goods {
 
     @Override
     public String toString() {
-        return "Goods{ \n" +
+        return "Product{ \n" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +

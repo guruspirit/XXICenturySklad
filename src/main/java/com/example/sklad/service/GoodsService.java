@@ -7,7 +7,7 @@ import java.util.List;
 public interface GoodsService {
     List<Goods> selectAll(); //
     Goods listId(int id);
-    void add(Goods goods); //
-    void update(Goods goods); //
-    void delete(int id); //
+    Goods add(Goods product); //
+    Goods update(Goods product); //
+    Goods delete(int id); //
 }

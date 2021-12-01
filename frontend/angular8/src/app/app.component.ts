@@ -14,4 +14,7 @@ export class AppComponent {
   Order(){
     this.router.navigate(["order"])
   }
+  AddGoods(){
+    this.router.navigate(["addgoods"])
+  }
 }

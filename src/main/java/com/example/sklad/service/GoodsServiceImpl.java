@@ -23,17 +23,22 @@ public class GoodsServiceImpl implements GoodsService{
     }
 
     @Override
-    public void add(Goods goods) {
-        goodsRepository.add(goods.getName(),goods.getPrice());
+    public Goods add(Goods product) {
+//        throw new UnsupportedOperationException("Not realized yet...");
+        return goodsRepository.save(product);
     }
 
     @Override
-    public void update(Goods goods) {
-        goodsRepository.setGoodsById(goods.getId(),goods.getName(),goods.getPrice());
+    public Goods update(Goods goods) {
+        goodsRepository.updateGoodsById(goods.getId(),goods.getName(),goods.getPrice());
+        return goods;
     }
 
     @Override
-    public void delete(int id) {
+    public Goods delete(int id) {
+        Goods product = new Goods();
+        product = listId(id);
         goodsRepository.deleteById(id);
+        return product;
     }
 }
