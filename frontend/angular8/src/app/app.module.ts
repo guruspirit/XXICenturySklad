@@ -8,7 +8,7 @@ import { OrderComponent } from './components/order/order.component';
 import {FormsModule} from '@angular/forms'
 import {ServiceService} from '../app/service/service.service'
 import {HttpClientModule} from '@angular/common/http';
-import { EditProductComponent } from './components/goods/edit-product/edit-product.component';
+import {EditProductComponent} from './components/goods/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [

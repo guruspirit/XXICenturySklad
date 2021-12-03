@@ -10,13 +10,14 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
   UrlGoods= 'http://localhost:80/h2/goods'
   UrlOrder= 'http://localhost:80/h2/order'
+
   getGoods(){
     return this.http.get<Product[]>(this.UrlGoods)
   }
   getOrder(){
     return this.http.get<Order[]>(this.UrlOrder)
   }
-  getProductId(id:Number){
+  getProductId(id:number){
     return this.http.get<Product>(this.UrlGoods+"/"+id);
   }
   addProduct(product:Product){

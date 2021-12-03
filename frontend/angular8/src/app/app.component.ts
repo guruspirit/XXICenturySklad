@@ -8,13 +8,18 @@ import {Router} from "@angular/router";
 })
 export class AppComponent {
   constructor(private router:Router) {  }
-  Goods(){
-    this.router.navigate(["goods"]);
-  }
-  Order(){
-    this.router.navigate(["order"])
-  }
-  AddGoods(){
-    this.router.navigate(["addgoods"])
-  }
+
+  // Goods(){
+  //   this.router.navigate(["goods"]);
+  // }
+  // Order(){
+  //   this.router.navigate(["order"])
+  // }
+  // AddGoods(){
+  //   this.router.navigate(["addProduct"])
+  // }
+  // EditProduct(){
+  //   this.router.navigate(["editProduct"])
+  // }
+
 }

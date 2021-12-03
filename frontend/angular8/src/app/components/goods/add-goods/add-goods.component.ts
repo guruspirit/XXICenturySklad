@@ -15,12 +15,12 @@ export class AddGoodsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  save(name:String,price:String){
+  save(name:string,price:string){
 
-    this.service.addProduct(new Product(7,name,new Number(price)))
+    this.service.addProduct(new Product(-1,name,Number(price)))
     .subscribe(data=>{
       alert("Новый продукт успешно добавлен");
-      this.router.navigate(["addgoods"]);
+      this.router.navigate(["addProduct"]);
     })
   }
 
