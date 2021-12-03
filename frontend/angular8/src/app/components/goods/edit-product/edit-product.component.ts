@@ -12,19 +12,27 @@ export class EditProductComponent implements OnInit {
 
   constructor(private service:ServiceService, private router:Router) { }
 
-  product!:Product;
+  product:Product = new Product(0,"no",0);
   ngOnInit(): void {
-    //this.edit();
+    this.getData();
   }
 
-  edit(){
-    alert('start edit');
+  getData(){
     let id = Number(localStorage.getItem("id"));
     this.service.getProductId(id)
       .subscribe(data=>{
         this.product = data;
       }
     )
+  }
+
+  update(){
+    this.service.updateProduct(this.product)
+      .subscribe(data=>{
+      this.product=data;
+      //alert("Обновление выполнено успешно");
+    })
+    this.router.navigate(["goods"]);
   }
 
 }

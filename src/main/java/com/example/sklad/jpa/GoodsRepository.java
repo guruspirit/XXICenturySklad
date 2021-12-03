@@ -16,17 +16,14 @@ public interface GoodsRepository extends JpaRepository<Goods, Integer> {
 //    void add(String name, Double price);
 
     @Modifying
-    @Query("update Goods g set g.name=?2, g.price=?3 where g.id=?1")
-    Goods updateGoodsById(int id, String name, Double price); //
-
     Goods deleteById(int id); //delete
 
     @Query(value = "select * from Goods WHERE ID>0;", nativeQuery = true)
     List<Goods> findAll(); //selectAll
 
     //find by id - найти по id - where id = ?1
-    //@Query("select g from Goods g where g.id = ?1")
-    Goods  findAllById(int id); //listId
+    @Query("select g from Goods g where g.id = ?1")
+    Goods  findOneById(int id); //listId
 
 
 }

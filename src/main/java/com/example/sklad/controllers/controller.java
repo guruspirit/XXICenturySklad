@@ -24,4 +24,13 @@ public class controller {
     public Goods add(@RequestBody Goods product){
         return goodsService.add(product);
     }
+    @GetMapping(path={"/{id}"})
+    public Goods listId(@PathVariable("id") int id){
+        return goodsService.listId(id);
+    }
+    @PutMapping(path={"/{id}"})
+    public Goods update(@RequestBody Goods product, @PathVariable("id") int id){
+        product.setId(id);
+        return goodsService.update(product);
+    }
 }

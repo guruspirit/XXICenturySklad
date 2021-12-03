@@ -9,6 +9,7 @@ import {FormsModule} from '@angular/forms'
 import {ServiceService} from '../app/service/service.service'
 import {HttpClientModule} from '@angular/common/http';
 import {EditProductComponent} from './components/goods/edit-product/edit-product.component';
+import { DeleteProductComponent } from './components/goods/delete-product/delete-product.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {EditProductComponent} from './components/goods/edit-product/edit-product
     GoodsComponent,
     OrderComponent,
     AddGoodsComponent,
-    EditProductComponent
+    EditProductComponent,
+    DeleteProductComponent
   ],
   imports: [
     BrowserModule,

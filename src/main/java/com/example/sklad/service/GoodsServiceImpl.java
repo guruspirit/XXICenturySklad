@@ -19,7 +19,7 @@ public class GoodsServiceImpl implements GoodsService{
 
     @Override
     public Goods listId(int id) {
-        return goodsRepository.findAllById(id);
+        return goodsRepository.findOneById(id);
     }
 
     @Override
@@ -29,9 +29,8 @@ public class GoodsServiceImpl implements GoodsService{
     }
 
     @Override
-    public Goods update(Goods goods) {
-        goodsRepository.updateGoodsById(goods.getId(),goods.getName(),goods.getPrice());
-        return goods;
+    public Goods update(Goods product) {
+        return goodsRepository.save(product);
     }
 
     @Override

@@ -23,7 +23,7 @@ export class ServiceService {
   addProduct(product:Product){
     return this.http.post<Product>(this.UrlGoods,product);
   }
-  updateGoods(product:Product){
-    return this.http.post<Product>(this.UrlGoods+"/"+product.id,product);
+  updateProduct(product:Product){
+    return this.http.put<Product>(this.UrlGoods+"/"+product.id,product);
   }
 }

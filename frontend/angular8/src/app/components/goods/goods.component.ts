@@ -20,12 +20,16 @@ export class GoodsComponent implements OnInit {
       .subscribe(data=>{
         this.goods = data;
       })
-
+    //alert("Updated");
   }
   edit(product:Product){
     localStorage.setItem("id",product.id.toString());
     this.router.navigate(["editProduct"]);
 //    this.service.updateGoods(product);
+  }
+  delete(product:Product){
+    localStorage.setItem("id",product.id.toString());
+    this.router.navigate(["deleteProduct"]);
   }
 
 }

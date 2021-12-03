@@ -33,7 +33,7 @@ public class Main implements CommandLineRunner{
 //        System.out.println("result: " + personRepository.findByClient("Иванов И.И."));
 //        Goods goods = new Goods("Картофель", 50.0);
 //        goodsRepository.save(goods);
-        System.out.println("RESULT " + goodsRepository.findAllById(2));
+        System.out.println("RESULT " + goodsRepository.findOneById(2));
 
     }
 }
